@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import AccountTypeSelection from "./components/accountTypeSelection";
+
+import "./App.css";
+import RestaurantProfile from "./components/restaurantProfile";
+import UserProfile from "./components/userProfile";
+import RecipeView from "./components/recipeView";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/userProfile" component={UserProfile}></Route>
+        <Route
+          exact
+          path="/restaurantProfile"
+          component={RestaurantProfile}
+        ></Route>
+        <Route path="/recipeView" component={RecipeView}></Route>
+
+        <Route path="/" component={AccountTypeSelection}></Route>
+      </Switch>
     </div>
   );
 }
