@@ -48,6 +48,16 @@ export default class RestaurantProfile extends Component {
               >
                 Add Details
               </Button>
+              <Button
+                onClick={() =>
+                  this.props.history.push({
+                    pathname: "/addMenuItem",
+                    state: { recipes: this.state.menuItems },
+                  })
+                }
+              >
+                Add Menu Item
+              </Button>
             </Container>
           );
         })}
