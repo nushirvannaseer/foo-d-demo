@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import RESTAURANT_MENU_ITEMS from "../database/restaurantMenuItems";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Button } from "react-bootstrap";
 
 export default class RestaurantProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       menuItems: [],
+      details: []
     };
   }
 
@@ -37,6 +38,16 @@ export default class RestaurantProfile extends Component {
                   ))}
                 </ul>
               </Row>
+              <Button
+                onClick={() =>
+                  this.props.history.push({
+                    pathname: "/addRestDetails",
+                    state: { recipes: this.state.details },
+                  })
+                }
+              >
+                Add Details
+              </Button>
             </Container>
           );
         })}
