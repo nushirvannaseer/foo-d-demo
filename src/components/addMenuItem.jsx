@@ -4,8 +4,8 @@ import React, { Container, Row, Col, Component, useState } from "react";
 
 export default function AddMenuItem(props) {
   const history = useHistory();
-  var recipes = history.location.state.details;
-  console.log(recipes);
+  var items = history.location.state.menuItems;
+  console.log(items);
   const [name, setName] = useState("");
   const [indg, setIndg] = useState("");
   const [price, setPrice] = useState("");
@@ -14,22 +14,24 @@ export default function AddMenuItem(props) {
   const onNameChange = (event) => {
     setName(event.target.value);
   };
- const onIndgChange = (event) => {
+  const onIndgChange = (event) => {
     setIndg(event.target.value);
-  }; const onPriceChange = (event) => {
+  };
+  const onPriceChange = (event) => {
     setPrice(event.target.value);
-  }; const onTagsChange = (event) => {
+  };
+  const onTagsChange = (event) => {
     setTags(event.target.value);
   };
 
   const handleSubmit = () => {
-    recipes.push({
-        name:name,
-        indg:indg,
-        price:price,
-        tags:tags,
+    items.push({
+      name: name,
+      ingredients: indg,
+      price: price,
+      tags: tags,
     });
-    console.log(recipes);
+    console.log(items);
     history.push("/restaurantProfile");
   };
 
@@ -59,5 +61,3 @@ export default function AddMenuItem(props) {
     </React.Fragment>
   );
 }
-
-

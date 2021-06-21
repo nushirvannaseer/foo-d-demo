@@ -17,20 +17,20 @@ class RecipeView extends Component {
             <span>Recipe Name: {this.recipe.name}</span>
           </Row>
           <Row>
-            <span>Steps: </span>
-            <ol>
+            <span>Steps: {this.recipe.steps} </span>
+            {/* <ol>
               {this.recipe.steps.map((step) => (
                 <li>{step} </li>
               ))}
-            </ol>
+            </ol> */}
           </Row>
           <Row>
-            <span>Tags:</span>
-            <ul style={{ listStyle: "none" }}>
+            <span>Tags: {this.recipe.tags}</span>
+            {/* <ul style={{ listStyle: "none" }}>
               {this.recipe.tags.map((tag) => (
                 <li>#{tag}, </li>
               ))}
-            </ul>
+            </ul> */}
           </Row>
         </Container>
       </React.Fragment>

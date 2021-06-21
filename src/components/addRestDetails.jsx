@@ -18,10 +18,8 @@ export default function AddRestDet(props) {
   };
 
   const handleSubmit = () => {
-    details.push({
-      address: address,
-      phoneNo: phoneNo,
-    });
+    details.push({ address: address, phoneNo: phoneNo });
+
     console.log(details);
     history.push("/restaurantProfile");
   };
