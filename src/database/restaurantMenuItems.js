@@ -1,4 +1,4 @@
-const RESTAURNT_MENU_ITEMS = [
+const RESTAURANT_MENU_ITEMS = [
   {
     name: "Naan Kebab",
     ingredients: ["kebab", "naan"],
@@ -18,4 +18,4 @@ const RESTAURNT_MENU_ITEMS = [
     tags: ["food", "naan", "channay"],
   },
 ];
-export default RESTAURNT_MENU_ITEMS;
+export default RESTAURANT_MENU_ITEMS;
