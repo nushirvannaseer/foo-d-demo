@@ -7,7 +7,7 @@ export default class RestaurantProfile extends Component {
     super(props);
     this.state = {
       menuItems: [],
-      details: []
+      details: [],
     };
   }
 
@@ -42,7 +42,7 @@ export default class RestaurantProfile extends Component {
                 onClick={() =>
                   this.props.history.push({
                     pathname: "/addRestDetails",
-                    state: { recipes: this.state.details },
+                    state: { details: this.state.details },
                   })
                 }
               >

@@ -4,8 +4,8 @@ import React, { Container, Row, Col, Component, useState } from "react";
 
 export default function AddRestDet(props) {
   const history = useHistory();
-  var recipes = history.location.state.details;
-  console.log(recipes);
+  var details = history.location.state.details;
+  console.log(details);
   const [address, setAddress] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
 
@@ -17,14 +17,12 @@ export default function AddRestDet(props) {
     setPhoneNo(event.target.value);
   };
 
-
-
   const handleSubmit = () => {
-    recipes.push({
+    details.push({
       address: address,
-      phoneNo: phoneNo
+      phoneNo: phoneNo,
     });
-    console.log(recipes);
+    console.log(details);
     history.push("/restaurantProfile");
   };
 
@@ -46,4 +44,3 @@ export default function AddRestDet(props) {
     </React.Fragment>
   );
 }
-
