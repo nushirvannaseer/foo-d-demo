@@ -29,15 +29,62 @@ export default function AddRestDet(props) {
       <h1>Add Details</h1>
 
       <form onSubmit={handleSubmit}>
-        <label>Address: </label>
-        <input type="text" onChange={onAddressChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Address: </label>
+        <input  style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }} type="text" onChange={onAddressChange} />
         <br />
 
-        <label>Phone Number: </label>
-        <input type="textarea" onChange={onPhoneChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Phone Number: </label>
+        <input  style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }} type="textarea" onChange={onPhoneChange} />
         <br />
 
-        <Button type="submit">Save</Button>
+        <Button
+                    style={{
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        marginTop: "40px",
+                        marginBottom: "10px",
+                        width: "80px",
+                        marginRight: "10px",
+                    }}
+                    type="submit"
+                >
+                    Save
+                </Button>
+                <Button
+                    className="clickable"
+                    style={{
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        marginTop: "40px",
+                        marginBottom: "10px",
+                        marginLeft: "10px",
+                    }}
+                    onClick={() => {
+                        history.push("/");
+                    }}
+                >
+                    Go to Home
+                </Button>
       </form>
     </React.Fragment>
   );

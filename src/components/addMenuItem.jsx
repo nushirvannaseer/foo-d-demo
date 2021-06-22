@@ -40,23 +40,91 @@ export default function AddMenuItem(props) {
       <h1>Add Details</h1>
 
       <form onSubmit={handleSubmit}>
-        <label>Name: </label>
-        <input type="text" onChange={onNameChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Name: </label>
+        <input style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }} type="text" onChange={onNameChange} />
         <br />
 
-        <label>Ingredients: </label>
-        <input type="text" onChange={onIndgChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Ingredients: </label>
+        <input style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }} type="text" onChange={onIndgChange} />
         <br />
 
-        <label>Price: </label>
-        <input type="text" onChange={onPriceChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Price: </label>
+        <input style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }} type="text" onChange={onPriceChange} />
         <br />
 
-        <label>Tags: </label>
-        <input type="text" onChange={onTagsChange} />
+        <label style={{ fontSize: "25px", marginRight: "10px" }}>Tags: </label>
+        <input  style={{
+                        width: "300px",
+                        height: "50px",
+                        marginTop: "30px",
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        textAlign: "center",
+                        paddingLeft: "8px",
+                        paddingRight: "8px",
+                        borderColor: "black",
+                    }}type="text" onChange={onTagsChange} />
         <br />
 
-        <Button type="submit">Save</Button>
+        <Button
+                    style={{
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        marginTop: "40px",
+                        marginBottom: "10px",
+                        width: "80px",
+                        marginRight: "10px",
+                    }}
+                    type="submit"
+                >
+                    Save
+                </Button>
+
+                <Button
+                    className="clickable"
+                    style={{
+                        borderRadius: "50px",
+                        borderStyle: "solid",
+                        marginTop: "40px",
+                        marginBottom: "10px",
+                        marginLeft: "10px",
+                    }}
+                    onClick={() => {
+                        history.push("/");
+                    }}
+                >
+                    Go to Home
+                </Button>
       </form>
     </React.Fragment>
   );
