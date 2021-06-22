@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import USER_RECIPES from "../database/userRecipes";
 import RESTAURANTS_BY_USER from "../database/restaurantsByUser";
 import { Container, Col, Row, Button } from "react-bootstrap";
+import './userProfile.css'
 
 export default class UserProfile extends Component {
     constructor(props) {
@@ -69,13 +70,13 @@ export default class UserProfile extends Component {
                                         });
                                     }}
                                 >
-                                    <span>Recipe Name: {recipe.name}</span>
+                                    <span className='clickable'>Recipe Name: {recipe.name}</span>
                                 </Row>
                             </Container>
                         );
                     })}
                     <Col>
-                        <Button
+                        <Button className='clickable'
                             style={{
                                 borderRadius: "50px",
                                 borderStyle: "solid",
@@ -94,7 +95,8 @@ export default class UserProfile extends Component {
                     </Col>
                 </div>
 
-                <div style={{
+                <div
+                    style={{
                         borderWidth: "2px",
                         borderStyle: "solid",
                         width: "fit-content",
@@ -106,29 +108,11 @@ export default class UserProfile extends Component {
                         alignItems: "center",
                         marginBottom: "30px",
                         padding: "50px",
-                    }}>
-                    <Container>
-                        <Row>
-                            
-                                <h2>Restaurants by User</h2>
-                           
-                            <Col>
-                                <Button
-                                    onClick={() =>
-                                        this.props.history.push({
-                                            pathname: "/addRestaurant",
-                                            state: {
-                                                restaurants: this.state
-                                                    .restaurants,
-                                            },
-                                        })
-                                    }
-                                >
-                                    Add Restaurant
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Container>
+                    }}
+                >
+                    <h2 style={{ marginBottom: "30px" }}>
+                        Restaurants by User
+                    </h2>
                     {this.state.restaurants.map((restaurant, id) => {
                         return (
                             <Container>
@@ -140,14 +124,47 @@ export default class UserProfile extends Component {
                                 //   });
                                 // }}
                                 >
-                                    <span>
+                                    <span className='clickable'>
                                         Restaurant Name: {restaurant.name}
                                     </span>
                                 </Row>
                             </Container>
                         );
                     })}
+                    <Col>
+                        <Button className='clickable' style={{
+                                borderRadius: "50px",
+                                borderStyle: "solid",
+                                marginTop: "40px",
+                                marginBottom: "10px",
+                            }}
+                            onClick={() =>
+                                this.props.history.push({
+                                    pathname: "/addRestaurant",
+                                    state: {
+                                        restaurants: this.state.restaurants,
+                                    },
+                                })
+                            }
+                        >
+                            Add Restaurant
+                        </Button>
+                    </Col>
                 </div>
+                <Button className='clickable' style={{
+                                borderRadius: "50px",
+                                borderStyle: "solid",
+                                marginTop: "40px",
+                                marginBottom: "10px",
+                            }}
+                            onClick={() =>{
+                                this.props.history.push('/')
+                            }
+                                
+                            }
+                        >
+                            Go to Home
+                        </Button>
             </React.Fragment>
         );
     }

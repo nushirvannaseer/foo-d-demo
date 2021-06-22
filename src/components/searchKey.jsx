@@ -18,8 +18,9 @@ function SearchKey(props) {
   console.log("Key", props.props);
   return (
     <div>
-      <div>
-        <h2>Recipes</h2>
+      <div style={{marginTop:'30px'}}>
+        <h2>Recipes Found</h2>
+        
         {console.log(props.props)}
         {recipes
           .filter((rec) => {
@@ -39,19 +40,34 @@ function SearchKey(props) {
                   clickOnRecipe(rec);
                 }}
               >
-                <b>
-                  <h5>{rec.name}</h5>
-                </b>
-                <p>{rec.steps}</p>
-                <b>
-                  <p>{rec.tags}</p>
-                </b>
+                <div style={{
+                      borderWidth: "2px",
+                      borderStyle: "solid",
+                      width: "fit-content",
+                      height: "fit-content",
+                      borderRadius: "50px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginBottom: "30px",
+                      padding: "50px",
+                  }}>
+                  <b>
+                    <h5>{rec.name}</h5>
+                  </b>
+                  <p>{rec.steps}</p>
+                  <b>
+                    <p>{rec.tags}</p>
+                  </b>
+                </div>
               </div>
             );
           })}
       </div>
-      <div>
-        <h2>Restaurants</h2>
+      <div style={{marginTop:'30px'}}>
+        <h2>Restaurants Found</h2>
+        
         {restaurants
           .filter((res) => {
             if (res == "") {
@@ -65,7 +81,18 @@ function SearchKey(props) {
           })
           .map((res) => {
             return (
-              <div>
+              <div style={{
+                borderWidth: "2px",
+                borderStyle: "solid",
+                width: "fit-content",
+                height: "fit-content",
+                borderRadius: "50px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "left",
+                marginBottom: "30px",
+                padding: "50px"
+            }}>
                 <b>
                   <h5>{res.name}</h5>
                 </b>

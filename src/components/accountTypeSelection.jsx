@@ -5,6 +5,7 @@ import { Row, Container } from "react-bootstrap";
 import { useHistory } from "react-router";
 import userIcon from "./../images/userIcon.png";
 import restaurantIcon from "./../images/restaurantsIcon.png";
+import searchIcon from "./../images/searchIcon.png";
 
 function AccountTypeSelection(props) {
   const history = useHistory();
@@ -54,7 +55,7 @@ function AccountTypeSelection(props) {
           >
             <img
               style={{ width: "150px", height: "fit-content" }}
-              src={userIcon}
+              src={searchIcon}
               alt=""
             ></img>
             Search
