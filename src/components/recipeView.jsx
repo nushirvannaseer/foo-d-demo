@@ -32,6 +32,14 @@ class RecipeView extends Component {
               ))}
             </ul> */}
           </Row>
+          <Row>
+            <span>Recipe by: {this.recipe.addedBy}</span>
+            {/* <ul style={{ listStyle: "none" }}>
+              {this.recipe.tags.map((tag) => (
+                <li>#{tag}, </li>
+              ))}
+            </ul> */}
+          </Row>
         </Container>
       </React.Fragment>
     );

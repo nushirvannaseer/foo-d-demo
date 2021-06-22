@@ -44,7 +44,7 @@ export default function AddMenuItem(props) {
         <input type="text" onChange={onNameChange} />
         <br />
 
-        <label>Ingrediants: </label>
+        <label>Ingredients: </label>
         <input type="text" onChange={onIndgChange} />
         <br />
 
