@@ -9,12 +9,15 @@ import AddRecipe from "./components/addRecipe";
 import AddRestaurant from "./components/addRestaurant";
 import AddRestDet from "./components/addRestDetails";
 import AddMenuItem from "./components/addMenuItem";
+import SearchResults from "./components/searchResults";
+import ShowResults from "./components/showResults";
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/addRecipe" component={AddRecipe}></Route>
+        <Route exact path="/search" component={ShowResults}></Route>
         <Route exact path="/userProfile" component={UserProfile}></Route>
         <Route exact path="/addRestaurant" component={AddRestaurant}></Route>
         <Route exact path="/addRestDetails" component={AddRestDet}></Route>
